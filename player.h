@@ -17,19 +17,18 @@ class Player {
 public:
 
 // constructor for the Player class. It takes a symbol and a name as parameters and initializes the player's symbol and name.
-Player() = default; // Default constructor
-    Player(char symbol, const std::string& name) : symbol(symbol), name(name) {}
-    char getSymbol() const { return symbol; }
-    const std::string& getName() const { return name; }
+    Player(); // Default constructor
+    
+    // Parameterized constructor
+
+    Player(char symbol, const std::string& name);
+    // Getters for the player's name and symbol
+    char getSymbol() const;
+    const std::string& getName() const;
 
     // Setter for the player's name
     void setName(const std::string& playerName);
     void setSymbol(char playerSymbol);
-
-    // Getters for the player's name and symbol
-    std:: string getName() const;
-    char getSymbol() const;
-
     
 };      
 

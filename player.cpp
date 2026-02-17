@@ -24,7 +24,7 @@ void Player::setSymbol(char playerSymbol) {
 }
 
 // getter for the player's name
-std::string Player::getName() const {
+const std::string& Player::getName() const {
     return name;
 }
 
