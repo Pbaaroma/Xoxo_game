@@ -12,6 +12,9 @@
  // Default construor
 Player::Player() : symbol('X'), name("player") {}
 
+// Constructor with parameters
+Player::Player(char symbol, const std::string& name) : symbol(symbol), name(name) {}
+
 
 // setter for the player's name
 void Player::setName(const std::string& playerName) {

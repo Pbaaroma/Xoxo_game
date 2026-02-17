@@ -14,7 +14,7 @@
   // Display the board function
   void Board ::displayBoard() const{
 
-    std:: cout << "\ncurrent board state:\n";
+    std:: cout << "\nTIC TAC TOE:\n";
     // Loop through the grid and display the board
     for(int i =0; i< size; i++){
         for (int j =0; j< size; j++){
