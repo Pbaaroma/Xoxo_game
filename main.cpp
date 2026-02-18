@@ -2,7 +2,7 @@
  * @file main.cpp
  * @author Gabriel Kofi Coffie Boafo & Emmanuel Mensah
  * @date 02-18-2026
- * @brief Threaded Tic-Tac-Toe demonstrating protected memory and multithreading
+ * @brief The main function of the tic-tac-toe game. It creates the players and the board, and starts the game loop
  */
 
 #include <iostream>
