@@ -28,7 +28,7 @@ void playGame(Player player, Board &board, std::mutex &m, std::atomic<bool> &gam
             row = std::rand() % 3;
             col = std::rand() % 3;
 
-            // Critical section: lock mutex
+            //  lock mutex
             std::lock_guard<std::mutex> lock(m);
 
             if (gameOver) break; // check again inside lock
@@ -39,7 +39,7 @@ void playGame(Player player, Board &board, std::mutex &m, std::atomic<bool> &gam
                 board.displayBoard();
 
                 // this make the game slower and more readable for me to see the moves being made by the players.
-    std::this_thread::sleep_for(std::chrono::seconds(3));
+    std::this_thread::sleep_for(std::chrono::seconds(2));
 
                 // Check for winner
                 if (board.checkWin(player.getSymbol())) {
@@ -53,8 +53,8 @@ void playGame(Player player, Board &board, std::mutex &m, std::atomic<bool> &gam
 
         } while (!moveMade);
 
-        // Optional: small delay for readability
-        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        // small delay for readability
+        std::this_thread::sleep_for(std::chrono::seconds(2));
     }
 }
 
